@@ -535,7 +535,7 @@ https://github.com/Muhler20
 
 LinkedIn
 
-https://linkedin.com/in/YOUR-LINKEDIN
+https://www.linkedin.com/in/michael-uhler-018030293/
 
 ---
 
@@ -544,7 +544,7 @@ https://linkedin.com/in/YOUR-LINKEDIN
 Special thanks to:
 
 - Saint Peter's University
-- Faculty Advisor **Dr. Suman Lamsal**
+- Partner: Suman Lamsal**
 - The open-source Python community
 - Scikit-Learn
 - XGBoost
@@ -565,5 +565,3 @@ Made with ❤️ using Python, Machine Learning, and Healthcare Data
 </div>
 ↓
 
-Interactive Dashboard
-```
