@@ -156,3 +156,218 @@ The following supervised learning models were implemented and compared.
 | ⚡ XGBoost (23 Features) | Gradient boosting benchmark |
 | ⚡ XGBoost (15 Features) | Reduced feature experiment |
 | ⚡ XGBoost (10 Features) | Final production model |
+
+
+# 📈 Model Performance
+
+Several machine learning models were trained and evaluated to identify the best classifier for predicting colorectal cancer survival.
+
+| Model | Accuracy | Recall | ROC-AUC | Notes |
+|:------|:--------:|:------:|:-------:|-------|
+| Random Forest | 0.75 | 1.00* | 0.50 | Overfit to majority class |
+| XGBoost (23 Features) | 0.54 | 0.42 | 0.49 | Better class balance |
+| XGBoost (15 Features) | 0.53 | 0.43 | 0.49 | Comparable performance |
+| ⭐ XGBoost (10 Features) | **0.52** | **0.45** | **0.50** | Best recall with simplest model |
+
+> **Final Model:** XGBoost (10 Features)
+
+The final model was selected because it achieved the strongest balance between simplicity and recall, making it the most suitable model for identifying higher-risk patients.
+
+---
+
+# 📊 Evaluation Metrics
+
+Model performance was evaluated using multiple classification metrics.
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- ROC-AUC
+- Confusion Matrix
+
+These metrics provide a more complete understanding of classification performance than accuracy alone, particularly when working with imbalanced healthcare datasets.
+
+---
+
+# 🔎 Confusion Matrix
+
+The confusion matrix illustrates where the model successfully predicts survival outcomes and where classification errors occur.
+
+<p align="center">
+
+<img src="images/confusion_matrix.png" width="700"/>
+
+</p>
+
+> Replace the image above with your confusion matrix from the presentation.
+
+---
+
+# ⭐ Feature Importance
+
+One advantage of tree-based ensemble models is the ability to estimate feature importance.
+
+The model identified several variables that contributed most strongly to survival prediction.
+
+| Rank | Feature |
+|------:|---------|
+| 1 | BMI |
+| 2 | Age |
+| 3 | Stage at Diagnosis |
+| 4 | Physical Activity Level |
+| 5 | Alcohol Consumption |
+| 6 | Tumor Aggressiveness |
+| 7 | Smoking Status |
+| 8 | Fiber Consumption |
+| 9 | Screening Regularity |
+| 10 | Socioeconomic Status |
+
+<p align="center">
+
+<img src="images/feature_importance.png" width="750"/>
+
+</p>
+
+> Replace this image with the Feature Importance graph from your presentation.
+
+---
+
+# 💡 Key Insights
+
+## 🧬 Clinical Factors Matter
+
+Patient age, BMI, and stage at diagnosis were among the strongest predictors of survival.
+
+---
+
+## 🏃 Lifestyle Influences Outcomes
+
+Behavioral factors including
+
+- Physical Activity
+- Smoking Status
+- Alcohol Consumption
+- Diet
+- Fiber Intake
+
+contributed meaningful predictive value.
+
+---
+
+## 🏥 Healthcare Accessibility
+
+Insurance coverage, screening regularity, and timely diagnosis demonstrated measurable influence on survival probability.
+
+---
+
+## ⚙ Model Simplification Improved Performance
+
+Reducing the feature set improved model interpretability while maintaining competitive predictive performance.
+
+---
+
+# 🌐 Interactive Prediction Dashboard
+
+To demonstrate real-world usability, the final XGBoost model was deployed using **Streamlit**.
+
+The dashboard enables users to:
+
+- Enter patient information
+- Generate survival probability predictions
+- View risk category
+- Review patient input summary
+- Visualize prediction confidence
+
+<p align="center">
+
+<img src="images/dashboard.png" width="900"/>
+
+</p>
+
+> Replace this image with your Streamlit dashboard screenshot.
+
+---
+
+# 🛠 Technologies Used
+
+| Technology | Purpose |
+|------------|-------------------------|
+| Python | Machine Learning Pipeline |
+| Pandas | Data Cleaning |
+| NumPy | Numerical Computing |
+| Matplotlib | Visualization |
+| Seaborn | Statistical Visualization |
+| Scikit-Learn | Data Preprocessing |
+| XGBoost | Classification Model |
+| Streamlit | Interactive Deployment |
+| Pickle | Model Serialization |
+| Jupyter Notebook | Research & Development |
+
+---
+
+# 📂 Repository Structure
+
+```text
+Colon-Cancer-Survival-Prediction/
+
+│
+
+├── colorectal_cancer_prediction.csv
+├── main.py
+├── app.py
+├── xgb_11.pkl
+├── features_11.pkl
+├── Presentation.pdf
+├── images/
+│   ├── dashboard.png
+│   ├── confusion_matrix.png
+│   └── feature_importance.png
+│
+├── requirements.txt
+└── README.md
+```
+
+---
+
+# 🚀 Workflow
+
+```text
+Clinical Dataset
+
+↓
+
+Data Cleaning
+
+↓
+
+Feature Engineering
+
+↓
+
+Encoding
+
+↓
+
+Train/Test Split
+
+↓
+
+Random Forest
+
+↓
+
+XGBoost
+
+↓
+
+Model Evaluation
+
+↓
+
+Feature Importance
+
+↓
+
+Interactive Dashboard
+```
