@@ -229,7 +229,8 @@ The model identified several variables that contributed most strongly to surviva
 
 </p>
 
-> Replace this image with the Feature Importance graph from your presentation.
+> <img width="706" height="656" alt="Screenshot 2026-07-14 113228" src="https://github.com/user-attachments/assets/dd403fc0-5799-4b1c-a4a7-45fd3fce5925" />
+
 
 ---
 
@@ -285,7 +286,9 @@ The dashboard enables users to:
 
 </p>
 
-> Replace this image with your Streamlit dashboard screenshot.
+> <img width="1470" height="519" alt="Screenshot 2026-07-14 113208" src="https://github.com/user-attachments/assets/2ff51902-a05c-4bb1-8b32-597daf650ced" />
+
+
 
 ---
 
